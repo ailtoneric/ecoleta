@@ -86,6 +86,3 @@ class PointsController {
 }
 
 export default PointsController;
--- SQLite
-SELECT id, image, name, email, whatsapp, latitude, longitude, city, uf
-FROM `points`;
