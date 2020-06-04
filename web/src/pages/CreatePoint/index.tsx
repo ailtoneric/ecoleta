@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { FiArrowLeft } from 'react-icons/fi';
+import { Map, TileLayer, Marker } from 'react-leaflet';
 
 import './styles.css';
 
@@ -10,7 +11,7 @@ const CreatePoint = () => {
   return (
     <div id="page-create-point">
       <header>
-        <img src={logo} alt="Ecoleta"/>
+        <img src={logo} alt="Ecoleta" />
 
         <Link to="/">
           <FiArrowLeft />
@@ -54,12 +55,20 @@ const CreatePoint = () => {
             </div>
           </div>
         </fieldset>
-        
+
         <fieldset>
           <legend>
             <h2>Endereço</h2>
             <span>Selecione o endereço no mapa</span>
           </legend>
+
+          <Map center={[-23.5131381, -46.8931377]} zoom={15}>
+            <TileLayer
+              attribution='&amp;copy <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
+              url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+            />
+            <Marker position={[-23.5131381, -46.8931377]} />
+          </Map>
 
           <div className="field-group">
             <div className="field">
@@ -85,27 +94,27 @@ const CreatePoint = () => {
 
           <ul className="items-grid">
             <li>
-              <img src="http://localhost:3333/resources/lampadas.svg" alt="teste"/>
+              <img src="http://localhost:3333/resources/lampadas.svg" alt="teste" />
               <span>Lâmpada</span>
             </li>
             <li>
-              <img src="http://localhost:3333/resources/lampadas.svg" alt="teste"/>
+              <img src="http://localhost:3333/resources/lampadas.svg" alt="teste" />
               <span>Lâmpada</span>
             </li>
             <li>
-              <img src="http://localhost:3333/resources/lampadas.svg" alt="teste"/>
+              <img src="http://localhost:3333/resources/lampadas.svg" alt="teste" />
               <span>Lâmpada</span>
             </li>
             <li>
-              <img src="http://localhost:3333/resources/lampadas.svg" alt="teste"/>
+              <img src="http://localhost:3333/resources/lampadas.svg" alt="teste" />
               <span>Lâmpada</span>
             </li>
             <li>
-              <img src="http://localhost:3333/resources/lampadas.svg" alt="teste"/>
+              <img src="http://localhost:3333/resources/lampadas.svg" alt="teste" />
               <span>Lâmpada</span>
             </li>
             <li>
-              <img src="http://localhost:3333/resources/lampadas.svg" alt="teste"/>
+              <img src="http://localhost:3333/resources/lampadas.svg" alt="teste" />
               <span>Lâmpada</span>
             </li>
           </ul>
