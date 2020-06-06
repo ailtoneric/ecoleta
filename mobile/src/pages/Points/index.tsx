@@ -14,7 +14,7 @@ interface Item {
   image_url: string
 };
 
-interface Points {
+interface Point {
   id: number,
   name: string,
   image: string,
@@ -26,7 +26,7 @@ const Points = () => {
   const [items, setItems] = useState<Item[]>([]);
   const [selectedItems, setSelectedItems] = useState<number[]>([]);
   const [initialPosition, setInitialPosition] = useState<[number, number]>([0, 0]); 
-  const [points, setPoints] = useState<Points[]>([]);
+  const [points, setPoints] = useState<Point[]>([]);
 
   const navigation = useNavigation();
   
@@ -35,7 +35,7 @@ const Points = () => {
       params: {
         city: "Barueri",
         uf: "SP",
-        items: [1,2]
+        items: [1,2,3,4,5]
       }
     }).then(response => {
       setPoints(response.data);
@@ -54,7 +54,6 @@ const Points = () => {
       const location = await Location.getCurrentPositionAsync();
 
       const { latitude, longitude } = location.coords;
-      console.log(latitude, longitude);
       
       setInitialPosition([latitude, longitude]);
     };
