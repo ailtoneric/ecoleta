@@ -83,6 +83,22 @@ class PointsController {
       ...point
     });
   }
+
+  async destroy (request: Request, response: Response) {
+    const { id } = request.params;
+
+    const point = await knex('points').where('id', id).first();
+
+    if (!point) {
+      return response.status(400).json({ message: 'Collection Point not found' });
+    }
+
+    await knex('points')
+      .where ('id', id)
+      .del();
+
+    return response.json();
+  }
 }
 
 export default PointsController;
