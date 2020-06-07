@@ -13,5 +13,9 @@ app.use(
   '/resources',
   express.static(path.resolve(__dirname, '..', 'resources', 'svg'))
 );
+app.use(
+  '/uploads',
+  express.static(path.resolve(__dirname, '..', 'resources', 'uploads'))
+);
 
 app.listen(3333);
