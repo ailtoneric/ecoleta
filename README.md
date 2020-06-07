@@ -33,7 +33,6 @@ This project was developed with the following technologies:
 - [React](https://reactjs.org)
 - [React Native](https://facebook.github.io/react-native/)
 - [Knex JS](https://knexjs.org/)
-- [Knex JS](https://knexjs.org/)
 - [Expo](https://expo.io/)
 
 
