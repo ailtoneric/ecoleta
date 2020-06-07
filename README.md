@@ -28,10 +28,13 @@ Project developed during Rocketseat Next Level Week 1.0, between the 1st and 7th
 This project was developed with the following technologies:
 
 - [Typescript](https://www.typescriptlang.org/)
-- [Node.js](https://nodejs.org/en/)
+- [Node JS](https://nodejs.org/en/)
 - [Express](https://expressjs.com/)
 - [React](https://reactjs.org)
 - [React Native](https://facebook.github.io/react-native/)
+- [Knex JS](https://knexjs.org/)
+- [Knex JS](https://knexjs.org/)
+- [Expo](https://expo.io/)
 
 
 ## :computer: Project
@@ -41,6 +44,25 @@ Ecoleta is a garbage collection management application, which allows data collec
 ## :memo: License
 
 This project is under the MIT license. See the file [LICENSE](LICENSE) for more details.
+
+## :space_invader: Installation
+
+Run npm install on the mobile, server, and web folders to install the dependencies.
+
+#### Start server:
+```npm run dev```
+
+#### Create migrations:
+```knex:migrate```
+
+#### Create as seeds:
+```knex:seed```
+
+#### Start frontend:
+```npm start```
+
+#### Start mobile with expo:
+```expo start```
 
 ## :+1: Acknowledgments
 
